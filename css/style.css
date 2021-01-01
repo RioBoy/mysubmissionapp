@@ -1,0 +1,296 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Montserrat:wght@300;400;600;700&display=swap');
+
+/* Header */
+.bg-header {
+	background-image: url(../img/kuliner.jpg);
+	height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+}
+
+.bg-header h5 {
+	font-family: Montserrat;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.bg-header h6 {
+	font-family: Lora;
+	font-weight: 500;
+	font-size: 25px;
+}
+
+.user-text {
+	font-family: Lora;
+	color: #FFCA05;
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.bg-header a img {
+	opacity: 0;
+}
+
+.user-img {
+	border-radius: 50%;
+	float: right;
+	width: 100px;
+	height: 100px;
+}
+
+/* Costum Jumbotron */
+.costum-jumbotron {
+	min-height: 200px;
+	background-color: #fff;
+	margin-top: -60px;
+	box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.costum-jumbotron h5 {
+	font-family: Lora;
+	font-size: 25px;
+	font-weight: 700;
+	color: #302E37;
+}
+
+.costum-jumbotron h3 {
+	font-family: Lora;
+	font-weight: 700;
+	font-size: 35px;
+	color: #302E37;
+}
+
+.costum-jumbotron h6 {
+	font-family: Lora;
+	font-weight: 500;
+	font-size: 22px;
+}
+
+.costum-jumbotron img {
+	height: 500px;
+	width: 350px;
+	margin-top: -136px;
+	position: absolute;
+}
+
+/* Content */
+.card {
+	min-height: 350px;
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	margin-top: 50px;
+}
+
+.card img {
+	border-radius: 10px;
+}
+
+.img-menu {
+	height: 230px;
+}
+
+.icon-plus {
+	position: absolute;
+	margin-left: 80%;
+	margin-top: -70%;
+	width: 40px;
+	height: 40px;
+}
+
+.text-menu {
+	font-family: Lora;
+	font-size: 35px;
+	font-weight: 700;
+	color: #302E37;
+	margin-top: 50px;
+}
+
+.card h6 {
+	font-family: Lora;
+	font-size: 25px;
+	font-weight: 400;
+	color: #302E37;
+}
+
+.card p {
+	font-family: Montserat;
+	font-size: 22px;
+	font-weight: 400;
+	color: #302E37;
+}
+
+/* Nav */
+.nav-item a {
+	font-family: Montserat;
+	font-size: 25px;
+	font-weight: 300;
+	color: #302E37;
+	margin-top: 50px;
+}
+
+.nav-item .active {
+	display: inline-block;
+    color: black;
+    background-color: white;
+    border-radius: 2em;
+    padding: 0.5em 1.5em;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+    margin-right: 15px;
+}
+
+/* New Costum Jumbotron */
+.new-costum-jumbotron {
+	margin-top: 150px;
+	background-color: #1B1822;
+	border-radius: 15px 15px 0 0;
+}
+
+.new-costum-jumbotron .btn {
+	border-radius: 50px;
+	color: #1B1822;
+	font-family: Montserat;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.new-costum-jumbotron .price p {
+	color: #fff;
+	font-size: 25px;
+	font-weight: 600;
+}
+.new-costum-jumbotron h6,
+.new-costum-jumbotron p {
+	color: #D6D6D8;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.new-costum-jumbotron hr {
+	color: #302E37;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+	.bg-header {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: -40px 0;
+		min-height: 300px;
+	}
+
+	.user-img {
+		width: 40px;
+		height: 40px;
+	}
+
+	/*.bg-header a img {
+		opacity: 1;
+	}*/
+
+	.bg-header h5 {
+		font-size: 15px;
+	}
+
+	.user-text {
+		font-size: 20px;
+	}
+
+	.bg-header h6 {
+		font-size: 25px;
+	}
+
+	.costum-jumbotron h5 {
+		font-size: 15px;
+	}
+
+	.costum-jumbotron h3 {
+		font-size: 25px;
+	}
+
+	.costum-jumbotron h6 {
+		font-size: 12px;
+	}
+
+	.costum-jumbotron img {
+		height: 310px;
+		width: 110px;
+		margin-top: -78px;
+		position: absolute;
+	}
+
+	.text-menu {
+		font-size: 15px;
+	}
+
+	.nav-item a {
+		margin-top: 0;
+		font-size: 12px;
+	}
+
+	.card {
+		margin-top: 0;
+		width: 120px;
+		min-height: 150px;
+	}
+
+	.img-menu {
+		height: 80px;
+	}
+
+	.card h6 {
+		font-size: 15px;
+	}
+
+	.card p {
+		font-size: 12px;
+	}
+
+	.icon-plus {
+		margin-left: 75%;
+		margin-top: -65%;
+		width: 20px;
+		height: 20px;
+	}
+
+	.new-costum-jumbotron {
+		margin-top: 80px;
+	}
+
+	.new-costum-jumbotron .btn {
+		font-size: 12px;
+	}
+
+	.new-costum-jumbotron .price p {
+		font-size: 12px;
+	}
+	.new-costum-jumbotron h6,
+	.new-costum-jumbotron p {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.bg-header {
+		height: 100%;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.bg-header {
+		height: 100%;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+
+	.bg-header a img {
+		opacity: 1;
+	}
+}
+
