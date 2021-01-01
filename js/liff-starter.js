@@ -91,6 +91,8 @@ function getProfileUser() {
             const img = document.createElement('img');
             img.src = profile.pictureUrl;
             img.alt = 'Profile Picture';
+            img.style.width = 100;
+            img.style.height = 100;
             profilePicture.appendChild(img);
         })
         .catch(function (error) {
