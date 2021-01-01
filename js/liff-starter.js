@@ -93,6 +93,14 @@ function getProfileUser() {
             img.alt = 'Profile Picture';
             img.classList.add('user-img');
             profilePicture.appendChild(img);
+
+            // ambil gambar default
+            const defaultPicture = document.getElementById('defaultPicture');
+            // jika ada gambar baru, maka hapus gambar default
+            if (img) {
+                defaultPicture.remove();
+            }
+
         })
         .catch(function (error) {
             window.alert('Error getting profile: ' + error);
