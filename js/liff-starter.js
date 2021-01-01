@@ -97,7 +97,31 @@ function registerButtonHandlers() {
     // login button
     document.getElementById('liffLoginButton').addEventListener('click', function () {
         if (!liff.isLoggedIn()) {
+            // ketika tombol login diklik
+            // lakukan login
             liff.login();
+
+            // lalu ambil profil pengguna
+            liff.getProfile()
+                .then(function (profile) {
+                    document.getElementById('displayNameField').textContent = profile.displayName;
+
+                    const profilePicture = document.getElementById('profilePicture');
+                    if (profilePicture.firstElementChild) {
+                        profilePicture.removeChild(profilePicture.firstElementChild);
+                    }
+
+                    const img = document.createElement('img');
+                    img.src = profile.pictureUrl;
+                    img.alt = 'Profile Picture';
+                    profilePicture.appendChild(img);
+
+                    document.getElementById('statusMessageField').textContent = profilePicture.statusMessage;
+                })
+                .catch(function (error) {
+                    window.alert('Error getting profile: ' + error);
+                });
+
         }
     });
 
@@ -128,28 +152,28 @@ function registerButtonHandlers() {
     });
 
     // get profile
-    document.getElementById('liffLoginButton').addEventListener('click', function () {
-        liff.getProfile()
-            .then(function (profile) {
-                // document.getElementById('userIdProfileField').textContent = profile.userId;
-                document.getElementById('displayNameField').textContent = profile.displayName;
+    // document.getElementById('liffLoginButton').addEventListener('click', function () {
+    //     liff.getProfile()
+    //         .then(function (profile) {
+    //             // document.getElementById('userIdProfileField').textContent = profile.userId;
+    //             document.getElementById('displayNameField').textContent = profile.displayName;
 
-                const profilePicture = document.getElementById('profilePicture');
-                if (profilePicture.firstElementChild) {
-                    profilePicture.removeChild(profilePicture.firstElementChild);
-                }
+    //             const profilePicture = document.getElementById('profilePicture');
+    //             if (profilePicture.firstElementChild) {
+    //                 profilePicture.removeChild(profilePicture.firstElementChild);
+    //             }
 
-                const img = document.createElement('img');
-                img.src = profile.pictureUrl;
-                img.alt = 'Profile Picture';
-                profilePicture.appendChild(img);
+    //             const img = document.createElement('img');
+    //             img.src = profile.pictureUrl;
+    //             img.alt = 'Profile Picture';
+    //             profilePicture.appendChild(img);
 
-                document.getElementById('statusMessageField').textContent = profilePicture.statusMessage;
-            })
-            .catch(function (error) {
-                window.alert('Error getting profile: ' + error);
-            })
-    })
+    //             document.getElementById('statusMessageField').textContent = profilePicture.statusMessage;
+    //         })
+    //         .catch(function (error) {
+    //             window.alert('Error getting profile: ' + error);
+    //         });
+    // });
 }
 
 function sendAlertIfNotInClient() {
