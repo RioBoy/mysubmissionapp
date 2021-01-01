@@ -5,10 +5,10 @@
 .bg-header {
 	background-image: url(../img/kuliner.jpg);
 	height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 350px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 350px;
 }
 
 .bg-header h5 {
@@ -133,12 +133,12 @@
 
 .nav-item .active {
 	display: inline-block;
-    color: black;
-    background-color: white;
-    border-radius: 2em;
-    padding: 0.5em 1.5em;
-    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
-    margin-right: 15px;
+	color: black;
+	background-color: white;
+	border-radius: 2em;
+	padding: 0.5em 1.5em;
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+	margin-right: 15px;
 }
 
 /* New Costum Jumbotron */
@@ -161,6 +161,7 @@
 	font-size: 25px;
 	font-weight: 600;
 }
+
 .new-costum-jumbotron h6,
 .new-costum-jumbotron p {
 	color: #D6D6D8;
@@ -185,10 +186,6 @@
 		width: 40px;
 		height: 40px;
 	}
-
-	/*.bg-header a img {
-		opacity: 1;
-	}*/
 
 	.bg-header h5 {
 		font-size: 15px;
@@ -266,6 +263,7 @@
 	.new-costum-jumbotron .price p {
 		font-size: 12px;
 	}
+
 	.new-costum-jumbotron h6,
 	.new-costum-jumbotron p {
 		font-size: 12px;
@@ -275,22 +273,22 @@
 @media screen and (max-width: 960px) {
 	.bg-header {
 		height: 100%;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }
 
 @media screen and (max-width: 576px) {
 	.bg-header {
 		height: 100%;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	.bg-header a img {
 		opacity: 1;
+		margin-left: -13px;
 	}
 }
-
