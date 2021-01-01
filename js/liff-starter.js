@@ -128,10 +128,10 @@ function registerButtonHandlers() {
     });
 
     // get profile
-    document.getElementById('getProfileButton').addEventListener('click', function () {
+    document.getElementById('liffLoginButton').addEventListener('click', function () {
         liff.getProfile()
             .then(function (profile) {
-                document.getElementById('userIdProfileField').textContent = profile.userId;
+                // document.getElementById('userIdProfileField').textContent = profile.userId;
                 document.getElementById('displayNameField').textContent = profile.displayName;
 
                 const profilePicture = document.getElementById('profilePicture');
