@@ -55,9 +55,9 @@ function initializeApp() {
 
     if (liff.isLoggedIn()) {
         document.getElementById('liffLoginButton').disabled = true;
-        document.getElementById('liffLogoutButton').disabled = false;
+        // document.getElementById('liffLogoutButton').disabled = false;
     } else {
-        document.getElementById('liffLoginButton').disabled = false;
+        // document.getElementById('liffLoginButton').disabled = false;
         document.getElementById('liffLogoutButton').disabled = true;
     }
 }
@@ -81,6 +81,18 @@ function getProfileUser() {
     liff.getProfile()
         .then(function (profile) {
             document.getElementById('displayNameField').textContent = profile.displayName;
+
+            const profilePicture = document.getElementById('profilePicture');
+            if (profilePicture.firstElementChild) {
+                profilePicture.removeChild(profilePicture.firstElementChild);
+            }
+
+            const img = document.createElement('img');
+            img.src = profile.pictureUrl;
+            img.alt = 'Profile Picture';
+            profilePicture.appendChild(img);
+
+            document.getElementById('statusMessageField').textContent = profilePicture.statusMessage;
         })
         .catch(function (error) {
             window.alert('Error getting profile: ' + error);
@@ -109,8 +121,6 @@ function registerButtonHandlers() {
     // login button
     document.getElementById('liffLoginButton').addEventListener('click', function () {
         if (!liff.isLoggedIn()) {
-            // ketika tombol login diklik
-            // lakukan login
             liff.login();
         }
     });
