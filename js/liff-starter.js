@@ -16,7 +16,7 @@ window.onload = function () {
             .catch(function (error) {
                 document.getElementById("liffAppContent").classList.add('hidden');
                 document.getElementById("nodeLiffIdErrorMessage").classList.remove('hidden');
-            })
+            });
     } else {
         myLiffId = defaultLiffId;
         initializeLiffOrDie(myLiffId);
@@ -126,6 +126,30 @@ function registerButtonHandlers() {
                 });
         }
     });
+
+    // get profile
+    document.getElementById('getProfileButton').addEventListener('click', function () {
+        liff.getProfile()
+            .then(function (profile) {
+                document.getElementById('userIdProfileField').textContent = profile.userId;
+                document.getElementById('displayNameField').textContent = profile.displayName;
+
+                const profilePicture = document.getElementById('profilePicture');
+                if (profilePicture.firstElementChild) {
+                    profilePicture.removeChild(profilePicture.firstElementChild);
+                }
+
+                const img = document.createElement('img');
+                img.src = profile.pictureUrl;
+                img.alt = 'Profile Picture';
+                profilePicture.appendChild(img);
+
+                document.getElementById('statusMessageField').textContent = profilePicture.statusMessage;
+            })
+            .catch(function (error) {
+                window.alert('Error getting profile: ' + error);
+            })
+    })
 }
 
 function sendAlertIfNotInClient() {

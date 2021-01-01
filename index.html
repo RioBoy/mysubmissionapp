@@ -28,6 +28,12 @@
                 </div>
                 <div class="col">
 
+                    <button id="getProfileButton">Get Profile</button>
+                    <h5 id="userIdProfileField"></h5>
+                    <h5 id="displayNameField"></h5>
+                    <h5 id="statusMessageField"></h5>
+                    <div id="profilePicture"></div>
+
                     <!-- Dropdown User -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown no-arrow">
@@ -59,41 +65,7 @@
 
     <!-- Debug Appication -->
     <div class="container">
-        <div id="liffAppContent">
-            <!-- ACTION BUTTONS -->
-            <div class="buttonGroup">
-                <div class="buttonRow">
-                    <button id="sendMessageButton" class="btn btn-warning btn-small">Send Message</button>
-                </div>
 
-            </div>
-
-            <!-- LIFF DATA -->
-            <div id="liffData">
-                <h3 id="liffDataHeader" class="textLeft">Informasi:</h3>
-                <table>
-                    <tr>
-                        <th>isInClient : </th>
-                        <td id="isInClient" class="textLeft"></td>
-                    </tr>
-                    <tr>
-                        <th>isLoggedIn : </th>
-                        <td id="isLoggedIn" class="textLeft"></td>
-                    </tr>
-                </table>
-            </div>
-            <!-- LOGIN LOGOUT BUTTONS -->
-            <div id="statusMessage">
-                <div id="isInClientMessage"></div>
-                <div id="apiReferenceMessage">
-                    <p>Available LIFF methods vary depending on the browser you use to open the LIFF app.</p>
-                    <p>Please refer to the <a
-                            href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">API
-                            reference
-                            page</a> for more information.</p>
-                </div>
-            </div>
-        </div>
         <!-- LIFF ID ERROR -->
         <div id="liffIdErrorMessage" class="hidden">
             <p>You have not assigned any value for LIFF ID.</p>
@@ -262,6 +234,45 @@
             </div>
             <a class="btn btn-warning btn-block btn-lg" href="#" role="button" id="btn-checkout">Pesan Sekarang</a>
         </div>
+
+        <!-- Keterangan browser -->
+        <div id="liffAppContent">
+            <!-- ACTION BUTTONS -->
+            <div class="buttonGroup">
+                <div class="buttonRow">
+                    <button id="sendMessageButton" class="btn btn-warning btn-small">Send Message</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LIFF DATA -->
+        <div id="liffData">
+            <h3 id="liffDataHeader" class="textLeft">Informasi:</h3>
+            <table>
+                <tr>
+                    <th>isInClient : </th>
+                    <td id="isInClient" class="textLeft"></td>
+                </tr>
+                <tr>
+                    <th>isLoggedIn : </th>
+                    <td id="isLoggedIn" class="textLeft"></td>
+                </tr>
+            </table>
+
+            <div id="statusMessage">
+                <div id="isInClientMessage"></div>
+                <div id="apiReferenceMessage">
+                    <p>Available LIFF methods vary depending on the browser you use to open the LIFF app.</p>
+                    <p>Please refer to the <a
+                            href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">API
+                            reference
+                            page</a> for more information.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Akhir keterangan browser -->
+
     </div>
     <!-- Akhir Jumbotron Harga -->
 
