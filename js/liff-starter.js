@@ -141,6 +141,8 @@ function registerButtonHandlers() {
 
     // get profile
     document.getElementById('getProfileButton').addEventListener('click', function () {
+        getProfileUser();
+
         // liff.getProfile()
         //     .then(function (profile) {
         //         // document.getElementById('userIdProfileField').textContent = profile.userId;
