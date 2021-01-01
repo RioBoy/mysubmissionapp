@@ -75,6 +75,28 @@ function displayIsInClientInfo() {
     }
 }
 
+function getProfileUser() {
+    liff.getProfile()
+        .then(function (profile) {
+            document.getElementById('displayNameField').textContent = profile.displayName;
+
+            const profilePicture = document.getElementById('profilePicture');
+            if (profilePicture.firstElementChild) {
+                profilePicture.removeChild(profilePicture.firstElementChild);
+            }
+
+            const img = document.createElement('img');
+            img.src = profile.pictureUrl;
+            img.alt = 'Profile Picture';
+            profilePicture.appendChild(img);
+
+            document.getElementById('statusMessageField').textContent = profilePicture.statusMessage;
+        })
+        .catch(function (error) {
+            window.alert('Error getting profile: ' + error);
+        });
+}
+
 // Even Handlers
 function registerButtonHandlers() {
     // open in external browser
@@ -102,26 +124,7 @@ function registerButtonHandlers() {
             liff.login();
 
             // lalu ambil profil pengguna
-            liff.getProfile()
-                .then(function (profile) {
-                    document.getElementById('displayNameField').textContent = profile.displayName;
-
-                    const profilePicture = document.getElementById('profilePicture');
-                    if (profilePicture.firstElementChild) {
-                        profilePicture.removeChild(profilePicture.firstElementChild);
-                    }
-
-                    const img = document.createElement('img');
-                    img.src = profile.pictureUrl;
-                    img.alt = 'Profile Picture';
-                    profilePicture.appendChild(img);
-
-                    document.getElementById('statusMessageField').textContent = profilePicture.statusMessage;
-                })
-                .catch(function (error) {
-                    window.alert('Error getting profile: ' + error);
-                });
-
+            getProfileUser();
         }
     });
 
