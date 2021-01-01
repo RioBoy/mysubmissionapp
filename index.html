@@ -23,11 +23,27 @@
             <div class="row">
                 <div class="col">
                     <a id="closeWindowButton" class="btn">
-                        <img src="img/icon/btn-close.png" class="mt-5" class="close-img">
+                        <img src="img/icon/btn-close.png" class="mt-5 close-img">
                     </a>
                 </div>
                 <div class="col">
-                    <img src="img/rio.jpg" class="mt-5 user-img">
+                    <!-- <img src="img/rio.jpg" class="mt-5 user-img"> -->
+
+                    <!-- Dropdown User -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle  d-flex justify-content-end" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="img/rio.jpg" class="user-img">
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item btn" id="liffLoginButton">Login</a>
+                                <a class="dropdown-item btn" id="liffLogoutButton">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Akhir Dropdown User -->
                 </div>
             </div>
             <div class="row">
@@ -68,10 +84,10 @@
                 </table>
             </div>
             <!-- LOGIN LOGOUT BUTTONS -->
-            <div class="buttonGroup">
+            <!-- <div class="buttonGroup">
                 <button id="liffLoginButton" class="btn btn-success btn-small">Log in</button>
                 <button id="liffLogoutButton" class="btn btn-warning btn-small">Log out</button>
-            </div>
+            </div> -->
             <div id="statusMessage">
                 <div id="isInClientMessage"></div>
                 <div id="apiReferenceMessage">
