@@ -25,9 +25,11 @@ function showAllMenu() {
 showAllMenu();
 
 // Active Nav-link
-$('.nav-link').on('click', function() {
-	$('.nav-link').removeClass('active');
+$('.menu-kategori').on('click', function() {
+	$('.menu-kategori').removeClass('active');
 	$(this).addClass('active');
+
+	// tombol kategori di klik
 	let kategori = $(this).html();
 
 	if (kategori == 'Semua') {

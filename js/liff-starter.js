@@ -55,9 +55,7 @@ function initializeApp() {
 
     if (liff.isLoggedIn()) {
         document.getElementById('liffLoginButton').disabled = true;
-        // document.getElementById('liffLogoutButton').disabled = false;
     } else {
-        // document.getElementById('liffLoginButton').disabled = false;
         document.getElementById('liffLogoutButton').disabled = true;
     }
 }
