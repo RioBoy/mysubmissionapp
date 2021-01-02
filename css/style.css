@@ -1,37 +1,96 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Montserrat:wght@300;400;600;700&display=swap');
 
-/* Header */
-.bg-header {
-	background-image: url(../img/kuliner.jpg);
-	height: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	min-height: 350px;
-}
-
-.bg-header h5 {
-	font-family: Montserrat;
-	font-size: 25px;
-	font-weight: 600;
-}
-
-.bg-header h6 {
+/* Fonts Apps */
+body {
 	font-family: Lora;
-	font-weight: 500;
+}
+
+.bg-header h5,
+.card p,
+.nav-item a,
+.new-costum-jumbotron .btn {
+	font-family: Montserrat
+}
+
+/* font-size: 25px; */
+.bg-header h5,
+.bg-header h6,
+.costum-jumbotron h5,
+.card h6,
+.nav-item a,
+.new-costum-jumbotron .btn,
+.new-costum-jumbotron .price p,
+.new-costum-jumbotron h6,
+.new-costum-jumbotron p {
 	font-size: 25px;
 }
 
-.user-text {
-	font-family: Lora;
-	color: #FFCA05;
-	font-size: 30px;
+/* font-weight: 700; */
+.user-text,
+.costum-jumbotron h5,
+.costum-jumbotron h3,
+.text-menu {
 	font-weight: 700;
 }
 
-.bg-header a .close-img {
+/* font-weight: 600; */
+.bg-header h5,
+.new-costum-jumbotron .btn,
+.new-costum-jumbotron .price p,
+.new-costum-jumbotron h6,
+.new-costum-jumbotron p {
+	font-weight: 600;
+}
+
+/* font-weight: 500; */
+.bg-header h6,
+.costum-jumbotron h6 {
+	font-weight: 500;
+}
+
+/* text-color */
+.costum-jumbotron h3,
+.text-menu,
+.nav-item a,
+.card h6,
+.card p,
+.costum-jumbotron h5,
+.new-costum-jumbotron hr {
+	color: #302E37;
+}
+
+/* opacity: 0; */
+.bg-header a .close-img,
+.costum-jumbotron,
+.store-text,
+.card,
+.new-costum-jumbotron {
 	opacity: 0;
+}
+
+/* opaciti: 1; transform: translate(0, 0); */
+.costum-jumbotron.show-jumbotron,
+.store-text.show-text,
+.card.show,
+.new-costum-jumbotron.show-costum-jumbotron {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+/* Header */
+.bg-header {
+	background-image: url(../img/kuliner.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	background-repeat: no-repeat;
+	min-height: 350px;
+}
+
+.user-text {
+	color: #FFCA05;
+	font-size: 30px;
 }
 
 .user-img {
@@ -53,23 +112,11 @@
 	box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-.costum-jumbotron h5 {
-	font-family: Lora;
-	font-size: 25px;
-	font-weight: 700;
-	color: #302E37;
-}
-
 .costum-jumbotron h3 {
-	font-family: Lora;
-	font-weight: 700;
 	font-size: 35px;
-	color: #302E37;
 }
 
 .costum-jumbotron h6 {
-	font-family: Lora;
-	font-weight: 500;
 	font-size: 22px;
 }
 
@@ -80,12 +127,23 @@
 	position: absolute;
 }
 
+.costum-jumbotron {
+	transform: translate(0, -40px);
+	transition: 1.2s
+}
+
+.store-text {
+	transform: translate(-50px, 0);
+	transition: .8s;
+}
+
 /* Content */
 .card {
-	/*min-height: 350px;*/
 	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
 	margin-top: 50px;
+	transform: translate(0, -40px);
+	transition: .8s;
 }
 
 .card img {
@@ -105,33 +163,22 @@
 }
 
 .text-menu {
-	font-family: Lora;
 	font-size: 35px;
-	font-weight: 700;
-	color: #302E37;
 	margin-top: 50px;
 }
 
 .card h6 {
-	font-family: Lora;
-	font-size: 25px;
 	font-weight: 400;
-	color: #302E37;
 }
 
 .card p {
-	font-family: Montserat;
 	font-size: 22px;
 	font-weight: 400;
-	color: #302E37;
 }
 
 /* Nav */
 .nav-item a {
-	font-family: Montserat;
-	font-size: 25px;
 	font-weight: 300;
-	color: #302E37;
 	margin-top: 50px;
 }
 
@@ -155,26 +202,20 @@
 .new-costum-jumbotron .btn {
 	border-radius: 50px;
 	color: #1B1822;
-	font-family: Montserat;
-	font-size: 25px;
-	font-weight: 600;
 }
 
 .new-costum-jumbotron .price p {
 	color: #fff;
-	font-size: 25px;
-	font-weight: 600;
 }
 
 .new-costum-jumbotron h6,
 .new-costum-jumbotron p {
 	color: #D6D6D8;
-	font-size: 25px;
-	font-weight: 600;
 }
 
-.new-costum-jumbotron hr {
-	color: #302E37;
+.new-costum-jumbotron {
+	transform: translate(0, 40px);
+	transition: 1.2s;
 }
 
 /* Responsive */
@@ -192,28 +233,30 @@
 		height: 40px;
 	}
 
-	.bg-header h5 {
+	.bg-header h5,
+	.costum-jumbotron h5,
+	.text-menu,
+	.card h6 {
 		font-size: 15px;
+	}
+
+	.new-costum-jumbotron h6,
+	.new-costum-jumbotron p,
+	.new-costum-jumbotron .btn,
+	.new-costum-jumbotron .price p,
+	.card p,
+	.nav-item a,
+	.costum-jumbotron h6 {
+		font-size: 12px;
 	}
 
 	.user-text {
 		font-size: 20px;
 	}
 
-	.bg-header h6 {
-		font-size: 25px;
-	}
-
-	.costum-jumbotron h5 {
-		font-size: 15px;
-	}
-
+	.bg-header h6,
 	.costum-jumbotron h3 {
 		font-size: 25px;
-	}
-
-	.costum-jumbotron h6 {
-		font-size: 12px;
 	}
 
 	.costum-jumbotron img {
@@ -223,31 +266,18 @@
 		position: absolute;
 	}
 
-	.text-menu {
-		font-size: 15px;
-	}
-
-	.nav-item a {
+	.nav-item a,
+	.card {
 		margin-top: 0;
-		font-size: 12px;
 	}
 
 	.card {
-		margin-top: 0;
 		width: 150px;
 		min-height: 150px;
 	}
 
 	.img-menu {
 		height: 80px;
-	}
-
-	.card h6 {
-		font-size: 15px;
-	}
-
-	.card p {
-		font-size: 12px;
 	}
 
 	.icon-plus {
@@ -259,19 +289,6 @@
 
 	.new-costum-jumbotron {
 		margin-top: 80px;
-	}
-
-	.new-costum-jumbotron .btn {
-		font-size: 12px;
-	}
-
-	.new-costum-jumbotron .price p {
-		font-size: 12px;
-	}
-
-	.new-costum-jumbotron h6,
-	.new-costum-jumbotron p {
-		font-size: 12px;
 	}
 }
 

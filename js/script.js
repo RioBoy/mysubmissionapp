@@ -2,6 +2,7 @@
 function showAllMenu() {
 	$.getJSON('data/pizza.json', function(data) {
 		let menu = data.menu;
+		$('#daftar-menu').empty();
 		$.each(menu, function(i, data) {
 			$('#daftar-menu').append(`
 					<div class="col col-sm-4 col-md-4 col-lg-4">
@@ -63,5 +64,35 @@ $('.menu-kategori').on('click', function() {
 
 		$('#daftar-menu').html(content);
 	});
+
+});
+
+// store-text show
+$(window).on('load', function() {
+	$('.store-text').addClass('show-text');
+});
+
+// costum-jumbotron show 
+$(window).on('load', function() {
+	$('.costum-jumbotron').addClass('show-jumbotron');
+});
+
+// efek show ketika di scroll
+$(window).scroll(function() {
+	const wScroll = $(this).scrollTop();
+
+	// show card
+	if (wScroll > $('.my-store').offset().top - 70) {
+		$('.card').each(function(i) {
+			setTimeout(function() {
+				$('.card').eq(i).addClass('show');
+			}, 300 * (i + 1));
+		});
+	}
+
+	// show new-costum-jumbotron
+	if (wScroll > 2000) {
+		$('.new-costum-jumbotron').addClass('show-costum-jumbotron');
+	}
 
 });
